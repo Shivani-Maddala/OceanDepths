@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b2d4f, #020b1c);
+  color: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: rgba(2, 11, 28, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.navbar nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #cce7ff;
+  font-weight: 400;
+}
+
+.navbar nav a:hover {
+  color: #00d4ff;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #c9e9ff;
+  margin-bottom: 30px;
+}
+
+.hero-content button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00d4ff, #0077ff);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 80px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.services-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.services-left p {
+  color: #c9e9ff;
+  margin-bottom: 30px;
+}
+
+.secondary-btn {
+  padding: 12px 26px;
+  background: transparent;
+  border: 1px solid #00d4ff;
+  color: #00d4ff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #c9e9ff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(2, 11, 28, 0.9);
+  color: #8fbcd4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 60px 30px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    padding: 60px 30px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* ECOSYSTEMS SECTION */
+.ecosystems {
+  padding: 100px 60px;
+  background: #020b1c;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: 20px;
+}
+
+.eco-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.eco-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+}
+
+.eco-card span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.eco-card:hover {
+  transform: scale(1.02);
+  transition: 0.4s ease;
+}
+
+.eco-card.tall {
+  grid-row: span 2;
+}
+
+.eco-card.wide {
+  grid-column: span 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .eco-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+
+  .eco-card.wide,
+  .eco-card.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #e6f7ff;
+}
+
+/* ECOSYSTEM GRID (USED FOR ALL 3 SECTIONS) */
+.ecosystems {
+  padding: 100px 60px;
+  background: #020b1c;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: 20px;
+}
+
+.eco-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.eco-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.75));
+}
+
+.eco-card span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.eco-card:hover {
+  transform: scale(1.03);
+}
+
+.eco-card.tall {
+  grid-row: span 2;
+}
+
+.eco-card.wide {
+  grid-column: span 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .eco-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+
+  .eco-card.tall,
+  .eco-card.wide {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+body {
+  padding-top: 80px;
+}
+
+
